@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap Card with Tab Navigation İle Yapıldı</title>
+<link rel="stylesheet" href="./style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<div x-data="{ open1: false }" > 
+  <div x-data="{ open2: false }" > 
+    <div x-data="{ open3: false }" > 
+      <div x-data="{ open4: false }" > 
+    <div class="card text-center" style="border: none; background-color: transparent;">
+        <div class="card-header aas" style=" background: #fff; border: none; justify-content: space-between; ">
+            <ul class="normalbar nav nav-tabs card-header-tabs p-1 mb-1 ms-5 " id="myTab">
+                <li class="me-5">
+                    <img src="https://res.cloudinary.com/zenbusiness/q_auto,w_40/v1/shared-assets/logo/circle-logo-teal.svg" alt="">
+                </li>
+                <li class="nav-item me-3"  style="display: flex;">
+                    <a @click="open1 = ! open1" style="border: none;" href="#planstart" class="nav-link" data-bs-toggle="tab">Plan & Start</a>
+                    <i style="font-size: 24px;" class="fa fa-angle-down mt-2 me-1"></i>
+                </li>
+                <li class="nav-item me-3" style="display: flex;">
+                    <a @click="open2 = ! open2"  style="border: none;" href="#rungrow" class="nav-link" data-bs-toggle="tab">Run & Grow</a>
+                    <i style="font-size: 24px;" class="fa fa-angle-down mt-2 me-1"></i>
+                </li>
+                <li class="nav-item me-3" style="display: flex;">
+                    <a  @click="open3 = ! open3" style="border: none;" href="#whyzenbusiness" class="nav-link" data-bs-toggle="tab">Why ZenBusiness?</a>
+                    <i style="font-size: 24px;" class="fa fa-angle-down mt-2 me-1"></i>
+                </li>
+                <li class="nav-item" style="display: flex;">
+                    <a  @click="open4 = ! open4" style="border: none;" href="#learn" class="nav-link" data-bs-toggle="tab">Learn</a>
+                    <i style="font-size: 24px;" class="fa fa-angle-down mt-2 me-1"></i>
+                </li>
+                <!--
+                <div style="left:10px">
+                  <button class="btn btn-outline-success aa" style="background: #187F8B; border: none; color: #fff;" type="submit">LOG IN</button>
+                </div>
+                -->
+            </ul>
+            <div style="background: #054C58; width: 80px; height: 40px; border-radius: 5px; margin-top: 5px; cursor: pointer;">
+              <div style="margin-top: 8px;">
+                <a style="text-decoration: none; color: #fff;" href="#" class="logo">LOG IN</a>
+              </div> 
+            </div>
+            
+            
+           
+        </div>
+
+        <div class="mobile-header">
+          
+          <input type="checkbox" id="menu-bar">
+          <label for="menu-bar">Menu</label>
+
+          <a style="font-size:16px; color:#054C58; text-decoration: none;" href="#" class="logo">LOG IN</a>
+
+         
+
+          <div class="navs"> 
+            <ul>
+              <li><a href="#">Plan & Start</a>
+                <ul>
+                  <!--Deneme-->
+                  <li><a style="padding:0; margin: 10px;" href="#">
+                    <div class="card" style="border-radius: 20px; border: none;">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-8">
+                            <p style="margin: 0; padding: 0;"><b>Business Planning</b></p>
+                            <p style="margin: 0; padding: 0;">Take the first steps toward turning your idea into a business.</p>
+                          </div>
+                          <div class="col-md-4">
+                            <img src="https://res.cloudinary.com/zenbusiness/q_auto,w_50/v1/shared-assets/icon/misc/navbar-business-planning.svg" alt="">
+                          </div>
+                        </div>
+                        <div style="text-align: center;">
+                          <i style="font-size: 24px;" class="fa fa-angle-down mt-2 me-1"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <ul>
+                    <li><a href="#">Formation Services</a></li>
+                    <li><a href="#">Limited Liability Company</a></li>
+                    <li><a href="#">S Corp</a></li>
+                    <li><a href="#">Corporation</a></li>
+                    <li><a href="#">DAO</a></li>
+                    <li><a href="#">Doing Business As (DBA)</a></li>
+                    <li><a href="#">Operating Agreement</a></li>
+                    <li><a href="#">Start a Business</a></li>
+                  </ul>
+                  </li>
+
+                  <li><a style="padding:0; margin: 10px;" href="#">
+                    <div class="card" style="border-radius: 20px;">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-8">
+                            <p style="margin: 0; padding: 0;"><b>Business Planning</b></p>
+                            <p>Take the first steps toward turning your idea into a business.</p>
+                          </div>
+                          <div class="col-md-4">
+                            <img src="https://res.cloudinary.com/zenbusiness/q_auto,w_50/v1/shared-assets/icon/misc/navbar-business-planning.svg" alt="">
+                          </div>
+                        </div>
+                        <div style="text-align: center;">
+                          <i style="font-size: 24px;" class="fa fa-angle-down mt-2 me-1"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <ul>
+                    <li><a href="#">Formation Services</a></li>
+                    <li><a href="#">Limited Liability Company</a></li>
+                    <li><a href="#">S Corp</a></li>
+                    <li><a href="#">Corporation</a></li>
+                    <li><a href="#">DAO</a></li>
+                    <li><a href="#">Doing Business As (DBA)</a></li>
+                    <li><a href="#">Operating Agreement</a></li>
+                    <li><a href="#">Start a Business</a></li>
+                  </ul>
+                  </li>
+                  <!--Deneme-->
+                  <!--
+                  <li><a href="#">Product & Pricing</a>
+                    <ul>
+                      <li><a href="#">Formation Services</a></li>
+                      <li><a href="#">Limited Liability Company</a></li>
+                      <li><a href="#">S Corp</a></li>
+                      <li><a href="#">Corporation</a></li>
+                      <li><a href="#">DAO</a></li>
+                      <li><a href="#">Doing Business As (DBA)</a></li>
+                      <li><a href="#">Operating Agreement</a></li>
+                      <li><a href="#">Start a Business</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Brand Your Business</a>
+                    <ul>
+                      <li><a href="#">Business Name Checker</a></li>
+                      <li><a href="#">Reverse a Business Name</a></li>
+                      <li><a href="#">Register A Domaing</a></li>
+                      <li><a href="#">Build a Website</a></li>
+                      <li><a href="#">Get a Business Email</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Banking & Finances</a>
+                    <ul>
+                      <li><a href="#">Get a Banking Resolution</a></li>
+                    </ul>
+                  </li>
+                  -->
+                </ul>
+              </li>
+              <li><a href="#">Run & Grow</a>
+                <ul>
+                  <li><a style="padding:0; margin: 10px;" href="#">
+                    <div class="card" style="border-radius: 20px;">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-8">
+                            <p style="margin: 0; padding: 0;"><b>Business Planning</b></p>
+                            <p>Take the first steps toward turning your idea into a business.</p>
+                          </div>
+                          <div class="col-md-4">
+                            <img src="https://res.cloudinary.com/zenbusiness/q_auto,w_50/v1/shared-assets/icon/misc/navbar-business-planning.svg" alt="">
+                          </div>
+                        </div>
+                        <div style="text-align: center;">
+                          <i style="font-size: 24px;" class="fa fa-angle-down mt-2 me-1"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <ul>
+                    <li><a href="#">Formation Services</a></li>
+                    <li><a href="#">Limited Liability Company</a></li>
+                    <li><a href="#">S Corp</a></li>
+                    <li><a href="#">Corporation</a></li>
+                    <li><a href="#">DAO</a></li>
+                    <li><a href="#">Doing Business As (DBA)</a></li>
+                    <li><a href="#">Operating Agreement</a></li>
+                    <li><a href="#">Start a Business</a></li>
+                  </ul>
+                  </li>
+
+                  <li><a style="padding:0; margin: 10px;" href="#">
+                    <div class="card" style="border-radius: 20px;">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-8">
+                            <p style="margin: 0; padding: 0;"><b>Business Planning</b></p>
+                            <p>Take the first steps toward turning your idea into a business.</p>
+                          </div>
+                          <div class="col-md-4">
+                            <img src="https://res.cloudinary.com/zenbusiness/q_auto,w_50/v1/shared-assets/icon/misc/navbar-business-planning.svg" alt="">
+                          </div>
+                        </div>
+                        <div style="text-align: center;">
+                          <i style="font-size: 24px;" class="fa fa-angle-down mt-2 me-1"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <ul>
+                    <li><a href="#">Formation Services</a></li>
+                    <li><a href="#">Limited Liability Company</a></li>
+                    <li><a href="#">S Corp</a></li>
+                    <li><a href="#">Corporation</a></li>
+                    <li><a href="#">DAO</a></li>
+                    <li><a href="#">Doing Business As (DBA)</a></li>
+                    <li><a href="#">Operating Agreement</a></li>
+                    <li><a href="#">Start a Business</a></li>
+                  </ul>
+                  </li>
+                </ul>
+              </li>
+
+
+              <li><a href="#">Why ZenBusiness?</a>
+                <ul>
+                  <li><a style="padding:0; margin: 10px;" href="#">
+                    <div class="card" style="border-radius: 20px;">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-8">
+                            <p style="margin: 0; padding: 0;"><b>Business Planning</b></p>
+                            <p>Take the first steps toward turning your idea into a business.</p>
+                          </div>
+                          <div class="col-md-4">
+                            <img src="https://res.cloudinary.com/zenbusiness/q_auto,w_50/v1/shared-assets/icon/misc/navbar-business-planning.svg" alt="">
+                          </div>
+                        </div>
+                        <div style="text-align: center;">
+                          <i style="font-size: 24px;" class="fa fa-angle-down mt-2 me-1"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <ul>
+                    <li><a href="#">Formation Services</a></li>
+                    <li><a href="#">Limited Liability Company</a></li>
+                    <li><a href="#">S Corp</a></li>
+                    <li><a href="#">Corporation</a></li>
+                    <li><a href="#">DAO</a></li>
+                    <li><a href="#">Doing Business As (DBA)</a></li>
+                    <li><a href="#">Operating Agreement</a></li>
+                    <li><a href="#">Start a Business</a></li>
+                  </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#">Learn</a>
+                <ul>
+                  <li><a style="padding:0; margin: 10px;" href="#">
+                    <div class="card" style="border-radius: 20px;">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-8">
+                            <p style="margin: 0; padding: 0;"><b>Business Planning</b></p>
+                            <p>Take the first steps toward turning your idea into a business.</p>
+                          </div>
+                          <div class="col-md-4">
+                            <img src="https://res.cloudinary.com/zenbusiness/q_auto,w_50/v1/shared-assets/icon/misc/navbar-business-planning.svg" alt="">
+                          </div>
+                        </div>
+                        <div style="text-align: center;">
+                          <i style="font-size: 24px;" class="fa fa-angle-down mt-2 me-1"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <ul>
+                    <li><a href="#">Formation Services</a></li>
+                    <li><a href="#">Limited Liability Company</a></li>
+                    <li><a href="#">S Corp</a></li>
+                    <li><a href="#">Corporation</a></li>
+                    <li><a href="#">DAO</a></li>
+                    <li><a href="#">Doing Business As (DBA)</a></li>
+                    <li><a href="#">Operating Agreement</a></li>
+                    <li><a href="#">Start a Business</a></li>
+                  </ul>
+                  </li>
+                </ul>
+              </li>  
+            </ul>
+          </div>
+
+         
+        </div>
+
+
+        <div class="card-body">
+            <div class="tab-content">
+                 <!--Plan & Start-->
+                <div x-show="open1" @click.outside="open1 = false" class="tab-pane fade show active" id="planstart">
+                    <div class="row" style="margin-left: 7%;">
+
+                        <!--FIRST CARD-->
+                        <div class="card firstcard mb-1" style="width: 17rem; margin-left: 2%; border-radius: 20px; text-align: left; padding: 0;">
+                            <div class="card-body" style="padding:0;">
+                              <div class="row px-3" >
+                                <div class="col-md-9" style="padding: 20px;">
+                                    <p style="padding: 0; margin: 0;"><b>Stay Compliant</b></p>
+                                    <p style="padding: 0; margin: 0;"; >Stay Compliant all year without having to do it yourself.</p>
+                                </div>
+                                <div class="col-md-3 p-1 mt-4">
+                                    <img src="https://res.cloudinary.com/zenbusiness/q_auto,w_50/v1/shared-assets/icon/misc/navbar-stay-compliant.svg" alt="">
+                                </div>
+                              </div>
+                              <div class="right-menu">
+                                <div style="text-align: center;">
+                                    <button class="menu-button" style="background: transparent; border: none;"><i class="fa fa-angle-down" style="font-size:48px; color:green;"></i></button>
+                                  </div>
+                                  <div class="alt-menu">
+                                    <ul style="padding: 0;"> 
+                                      <li class="mb-3"><a href="#">Find Startup Costs</a> </li>
+                                      <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                      <li class="mb-3"><a href="#">Make a Business Plan</a> <br></li>
+                                      <li class="mb-3"><a href="#">Licences & Permits</a></li>
+                                      <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                    </ul>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+
+                        <!--SECOND CARD-->  
+                        <div class="card firstcard mb-1" style="width: 17rem; margin-left: 2%; border-radius: 20px; text-align: left; padding: 0;">
+                          <div class="card-body" style="padding:0;">
+                            <div class="row px-3" >
+                              <div class="col-md-9" style="padding: 20px;">
+                                  <p style="padding: 0; margin: 0;"><b>Stay Compliant</b></p>
+                                  <p style="padding: 0; margin: 0;"; >Stay Compliant all year without having to do it yourself.</p>
+                              </div>
+                              <div class="col-md-3 p-1 mt-4">
+                                  <img src="https://res.cloudinary.com/zenbusiness/q_auto,w_50/v1/shared-assets/icon/misc/navbar-stay-compliant.svg" alt="">
+                              </div>
+                            </div>
+                            <div class="right-menu">
+                              <div style="text-align: center;">
+                                  <button class="menu-button" style="background: transparent; border: none;"><i class="fa fa-angle-down" style="font-size:48px; color:green;"></i></button>
+                                </div>
+                                <div class="alt-menu">
+                                  <ul style="padding: 0;"> 
+                                    <li class="mb-3"><a href="#">Find Startup Costs</a> </li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                    <li class="mb-3"><a href="#">Make a Business Plan</a> <br></li>
+                                    <li class="mb-3"><a href="#">Licences & Permits</a></li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                  </ul>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--THIRD CARD-->
+                        <div class="card firstcard mb-1" style="width: 17rem; margin-left: 2%; border-radius: 20px; text-align: left; padding: 0;">
+                          <div class="card-body" style="padding:0;">
+                            <div class="row px-3" >
+                              <div class="col-md-9" style="padding: 20px;">
+                                  <p style="padding: 0; margin: 0;"><b>Stay Compliant</b></p>
+                                  <p style="padding: 0; margin: 0;"; >Stay Compliant all year without having to do it yourself.</p>
+                              </div>
+                              <div class="col-md-3 p-1 mt-4">
+                                  <img src="https://res.cloudinary.com/zenbusiness/q_auto,w_50/v1/shared-assets/icon/misc/navbar-stay-compliant.svg" alt="">
+                              </div>
+                            </div>
+                            <div class="right-menu">
+                              <div style="text-align: center;">
+                                  <button class="menu-button" style="background: transparent; border: none;"><i class="fa fa-angle-down" style="font-size:48px; color:green;"></i></button>
+                                </div>
+                                <div class="alt-menu">
+                                  <ul style="padding: 0;"> 
+                                    <li class="mb-3"><a href="#">Find Startup Costs</a> </li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                    <li class="mb-3"><a href="#">Make a Business Plan</a> <br></li>
+                                    <li class="mb-3"><a href="#">Licences & Permits</a></li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                  </ul>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--LAST CARD-->
+                        <div class="card firstcard mb-1" style="width: 17rem; margin-left: 2%; border-radius: 20px; text-align: left; padding: 0;">
+                          <div class="card-body" style="padding:0;">
+                            <div class="row px-3" >
+                              <div class="col-md-9" style="padding: 20px;">
+                                  <p style="padding: 0; margin: 0;"><b>Stay Compliant</b></p>
+                                  <p style="padding: 0; margin: 0;"; >Stay Compliant all year without having to do it yourself.</p>
+                              </div>
+                              <div class="col-md-3 p-1 mt-4">
+                                  <img src="https://res.cloudinary.com/zenbusiness/q_auto,w_50/v1/shared-assets/icon/misc/navbar-stay-compliant.svg" alt="">
+                              </div>
+                            </div>
+                            <div class="right-menu">
+                              <div style="text-align: center;">
+                                  <button class="menu-button" style="background: transparent; border: none;"><i class="fa fa-angle-down" style="font-size:48px; color:green;"></i></button>
+                                </div>
+                                <div class="alt-menu">
+                                  <ul style="padding: 0;"> 
+                                    <li class="mb-3"><a href="#">Find Startup Costs</a> </li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                    <li class="mb-3"><a href="#">Make a Business Plan</a> <br></li>
+                                    <li class="mb-3"><a href="#">Licences & Permits</a></li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                  </ul>
+                                </div>
+                            </div>
+                          </div>
+                        </div>  
+
+                    </div>
+                </div> 
+                <!--Plan & Start END-->
+
+
+                <!--Run & Grow-->
+                <div x-show="open2" @click.outside="open2 = false"  class="tab-pane fade" id="rungrow">
+                    <div class="row" style="margin-left: 7%;">
+
+                        <!--FIRST CARD-->
+                        <div class="card firstcard mb-1" style="width: 17rem; margin-left: 2%; border-radius: 20px; text-align: left; padding: 0;">
+                          <div class="card-body" style="padding:0;">
+                            <div class="row px-3" >
+                              <div class="col-md-9" style="padding: 20px;">
+                                  <p style="padding: 0; margin: 0;"><b>Stay Compliant</b></p>
+                                  <p style="padding: 0; margin: 0;"; >Stay Compliant all year without having to do it yourself.</p>
+                              </div>
+                              <div class="col-md-3 p-1 mt-4">
+                                  <img src="https://res.cloudinary.com/zenbusiness/q_auto,w_50/v1/shared-assets/icon/misc/navbar-stay-compliant.svg" alt="">
+                              </div>
+                            </div>
+                            <div class="right-menu">
+                              <div style="text-align: center;">
+                                  <button class="menu-button" style="background: transparent; border: none;"><i class="fa fa-angle-down" style="font-size:48px; color:green;"></i></button>
+                                </div>
+                                <div class="alt-menu">
+                                  <ul style="padding: 0;"> 
+                                    <li class="mb-3"><a href="#">Find Startup Costs</a> </li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                    <li class="mb-3"><a href="#">Make a Business Plan</a> <br></li>
+                                    <li class="mb-3"><a href="#">Licences & Permits</a></li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                  </ul>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--SECOND CARD-->  
+                        <div class="card firstcard mb-1" style="width: 17rem; margin-left: 2%; border-radius: 20px; text-align: left; padding: 0;">
+                          <div class="card-body" style="padding:0;">
+                            <div class="row px-3" >
+                              <div class="col-md-9" style="padding: 20px;">
+                                  <p style="padding: 0; margin: 0;"><b>Stay Compliant</b></p>
+                                  <p style="padding: 0; margin: 0;"; >Stay Compliant all year without having to do it yourself.</p>
+                              </div>
+                              <div class="col-md-3 p-1 mt-4">
+                                  <img src="https://res.cloudinary.com/zenbusiness/q_auto,w_50/v1/shared-assets/icon/misc/navbar-stay-compliant.svg" alt="">
+                              </div>
+                            </div>
+                            <div class="right-menu">
+                              <div style="text-align: center;">
+                                  <button class="menu-button" style="background: transparent; border: none;"><i class="fa fa-angle-down" style="font-size:48px; color:green;"></i></button>
+                                </div>
+                                <div class="alt-menu">
+                                  <ul style="padding: 0;"> 
+                                    <li class="mb-3"><a href="#">Find Startup Costs</a> </li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                    <li class="mb-3"><a href="#">Make a Business Plan</a> <br></li>
+                                    <li class="mb-3"><a href="#">Licences & Permits</a></li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                  </ul>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--THIRD CARD-->
+                        <div class="card firstcard mb-1" style="width: 17rem; margin-left: 2%; border-radius: 20px; text-align: left; padding: 0;">
+                          <div class="card-body" style="padding:0;">
+                            <div class="row px-3" >
+                              <div class="col-md-9" style="padding: 20px;">
+                                  <p style="padding: 0; margin: 0;"><b>Stay Compliant</b></p>
+                                  <p style="padding: 0; margin: 0;"; >Stay Compliant all year without having to do it yourself.</p>
+                              </div>
+                              <div class="col-md-3 p-1 mt-4">
+                                  <img src="https://res.cloudinary.com/zenbusiness/q_auto,w_50/v1/shared-assets/icon/misc/navbar-stay-compliant.svg" alt="">
+                              </div>
+                            </div>
+                            <div class="right-menu">
+                              <div style="text-align: center;">
+                                  <button class="menu-button" style="background: transparent; border: none;"><i class="fa fa-angle-down" style="font-size:48px; color:green;"></i></button>
+                                </div>
+                                <div class="alt-menu">
+                                  <ul style="padding: 0;"> 
+                                    <li class="mb-3"><a href="#">Find Startup Costs</a> </li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                    <li class="mb-3"><a href="#">Make a Business Plan</a> <br></li>
+                                    <li class="mb-3"><a href="#">Licences & Permits</a></li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                  </ul>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Run & Grow END-->
+
+
+                <!--Why ZenBusiness?-->
+                <div x-show="open3" @click.outside="open3 = false"  class="tab-pane fade" id="whyzenbusiness">
+                    <div class="row" style="margin-left: 7%;">
+
+                        <!--FIRST CARD-->
+                        <div class="card firstcard mb-1" style="width: 17rem; margin-left: 2%; border-radius: 20px; text-align: left; padding: 0;">
+                          <div class="card-body" style="padding:0;">
+                            <div class="row px-3" >
+                              <div class="col-md-9" style="padding: 20px;">
+                                  <p style="padding: 0; margin: 0;"><b>Stay Compliant</b></p>
+                                  <p style="padding: 0; margin: 0;"; >Stay Compliant all year without having to do it yourself.</p>
+                              </div>
+                              <div class="col-md-3 p-1 mt-4">
+                                  <img src="https://res.cloudinary.com/zenbusiness/q_auto,w_50/v1/shared-assets/icon/misc/navbar-stay-compliant.svg" alt="">
+                              </div>
+                            </div>
+                            <div class="right-menu">
+                              <div style="text-align: center;">
+                                  <button class="menu-button" style="background: transparent; border: none;"><i class="fa fa-angle-down" style="font-size:48px; color:green;"></i></button>
+                                </div>
+                                <div class="alt-menu">
+                                  <ul style="padding: 0;"> 
+                                    <li class="mb-3"><a href="#">Find Startup Costs</a> </li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                    <li class="mb-3"><a href="#">Make a Business Plan</a> <br></li>
+                                    <li class="mb-3"><a href="#">Licences & Permits</a></li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                  </ul>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--SECOND CARD-->  
+                        <div class="card firstcard mb-1" style="width: 17rem; margin-left: 2%; border-radius: 20px; text-align: left; padding: 0;">
+                          <div class="card-body" style="padding:0;">
+                            <div class="row px-3" >
+                              <div class="col-md-9" style="padding: 20px;">
+                                  <p style="padding: 0; margin: 0;"><b>Stay Compliant</b></p>
+                                  <p style="padding: 0; margin: 0;"; >Stay Compliant all year without having to do it yourself.</p>
+                              </div>
+                              <div class="col-md-3 p-1 mt-4">
+                                  <img src="https://res.cloudinary.com/zenbusiness/q_auto,w_50/v1/shared-assets/icon/misc/navbar-stay-compliant.svg" alt="">
+                              </div>
+                            </div>
+                            <div class="right-menu">
+                              <div style="text-align: center;">
+                                  <button class="menu-button" style="background: transparent; border: none;"><i class="fa fa-angle-down" style="font-size:48px; color:green;"></i></button>
+                                </div>
+                                <div class="alt-menu">
+                                  <ul style="padding: 0;"> 
+                                    <li class="mb-3"><a href="#">Find Startup Costs</a> </li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                    <li class="mb-3"><a href="#">Make a Business Plan</a> <br></li>
+                                    <li class="mb-3"><a href="#">Licences & Permits</a></li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                  </ul>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--THIRD CARD-->
+                        <div class="card firstcard mb-1" style="width: 17rem; margin-left: 2%; border-radius: 20px; text-align: left; padding: 0;">
+                          <div class="card-body" style="padding:0;">
+                            <div class="row px-3" >
+                              <div class="col-md-9" style="padding: 20px;">
+                                  <p style="padding: 0; margin: 0;"><b>Stay Compliant</b></p>
+                                  <p style="padding: 0; margin: 0;"; >Stay Compliant all year without having to do it yourself.</p>
+                              </div>
+                              <div class="col-md-3 p-1 mt-4">
+                                  <img src="https://res.cloudinary.com/zenbusiness/q_auto,w_50/v1/shared-assets/icon/misc/navbar-stay-compliant.svg" alt="">
+                              </div>
+                            </div>
+                            <div class="right-menu">
+                              <div style="text-align: center;">
+                                  <button class="menu-button" style="background: transparent; border: none;"><i class="fa fa-angle-down" style="font-size:48px; color:green;"></i></button>
+                                </div>
+                                <div class="alt-menu">
+                                  <ul style="padding: 0;"> 
+                                    <li class="mb-3"><a href="#">Find Startup Costs</a> </li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                    <li class="mb-3"><a href="#">Make a Business Plan</a> <br></li>
+                                    <li class="mb-3"><a href="#">Licences & Permits</a></li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                  </ul>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--LAST CARD-->
+                        <div class="card firstcard mb-1" style="width: 17rem; margin-left: 2%; border-radius: 20px; text-align: left; padding: 0;">
+                          <div class="card-body" style="padding:0;">
+                            <div class="row px-3" >
+                              <div class="col-md-9" style="padding: 20px;">
+                                  <p style="padding: 0; margin: 0;"><b>Stay Compliant</b></p>
+                                  <p style="padding: 0; margin: 0;"; >Stay Compliant all year without having to do it yourself.</p>
+                              </div>
+                              <div class="col-md-3 p-1 mt-4">
+                                  <img src="https://res.cloudinary.com/zenbusiness/q_auto,w_50/v1/shared-assets/icon/misc/navbar-stay-compliant.svg" alt="">
+                              </div>
+                            </div>
+                            <div class="right-menu">
+                              <div style="text-align: center;">
+                                  <button class="menu-button" style="background: transparent; border: none;"><i class="fa fa-angle-down" style="font-size:48px; color:green;"></i></button>
+                                </div>
+                                <div class="alt-menu">
+                                  <ul style="padding: 0;"> 
+                                    <li class="mb-3"><a href="#">Find Startup Costs</a> </li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                    <li class="mb-3"><a href="#">Make a Business Plan</a> <br></li>
+                                    <li class="mb-3"><a href="#">Licences & Permits</a></li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                  </ul>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Why ZenBusiness? END-->
+
+
+                <!--Learn-->
+                <div x-show="open4" @click.outside="open4 = false"  class="tab-pane fade" id="learn">
+                    <div class="row" style="margin-left: 7%;">
+
+                        <!--FIRST CARD-->
+                        <div class="card firstcard mb-1" style="width: 17rem; margin-left: 2%; border-radius: 20px; text-align: left; padding: 0;">
+                          <div class="card-body" style="padding:0;">
+                            <div class="row px-3" >
+                              <div class="col-md-9" style="padding: 20px;">
+                                  <p style="padding: 0; margin: 0;"><b>Stay Compliant</b></p>
+                                  <p style="padding: 0; margin: 0;"; >Stay Compliant all year without having to do it yourself.</p>
+                              </div>
+                              <div class="col-md-3 p-1 mt-4">
+                                  <img src="https://res.cloudinary.com/zenbusiness/q_auto,w_50/v1/shared-assets/icon/misc/navbar-stay-compliant.svg" alt="">
+                              </div>
+                            </div>
+                            <div class="right-menu">
+                              <div style="text-align: center;">
+                                  <button class="menu-button" style="background: transparent; border: none;"><i class="fa fa-angle-down" style="font-size:48px; color:green;"></i></button>
+                                </div>
+                                <div class="alt-menu">
+                                  <ul style="padding: 0;"> 
+                                    <li class="mb-3"><a href="#">Find Startup Costs</a> </li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                    <li class="mb-3"><a href="#">Make a Business Plan</a> <br></li>
+                                    <li class="mb-3"><a href="#">Licences & Permits</a></li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                  </ul>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--SECOND CARD-->  
+                        <div class="card firstcard mb-1" style="width: 17rem; margin-left: 2%; border-radius: 20px; text-align: left; padding: 0;">
+                          <div class="card-body" style="padding:0;">
+                            <div class="row px-3" >
+                              <div class="col-md-9" style="padding: 20px;">
+                                  <p style="padding: 0; margin: 0;"><b>Stay Compliant</b></p>
+                                  <p style="padding: 0; margin: 0;"; >Stay Compliant all year without having to do it yourself.</p>
+                              </div>
+                              <div class="col-md-3 p-1 mt-4">
+                                  <img src="https://res.cloudinary.com/zenbusiness/q_auto,w_50/v1/shared-assets/icon/misc/navbar-stay-compliant.svg" alt="">
+                              </div>
+                            </div>
+                            <div class="right-menu">
+                              <div style="text-align: center;">
+                                  <button class="menu-button" style="background: transparent; border: none;"><i class="fa fa-angle-down" style="font-size:48px; color:green;"></i></button>
+                                </div>
+                                <div class="alt-menu">
+                                  <ul style="padding: 0;"> 
+                                    <li class="mb-3"><a href="#">Find Startup Costs</a> </li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                    <li class="mb-3"><a href="#">Make a Business Plan</a> <br></li>
+                                    <li class="mb-3"><a href="#">Licences & Permits</a></li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                  </ul>
+                                </div>
+                            </div>
+                          </div>
+                        </div> 
+
+                        <!--THIRD CARD-->
+                        <div class="card firstcard mb-1" style="width: 17rem; margin-left: 2%; border-radius: 20px; text-align: left; padding: 0;">
+                          <div class="card-body" style="padding:0;">
+                            <div class="row px-3" >
+                              <div class="col-md-9" style="padding: 20px;">
+                                  <p style="padding: 0; margin: 0;"><b>Stay Compliant</b></p>
+                                  <p style="padding: 0; margin: 0;"; >Stay Compliant all year without having to do it yourself.</p>
+                              </div>
+                              <div class="col-md-3 p-1 mt-4">
+                                  <img src="https://res.cloudinary.com/zenbusiness/q_auto,w_50/v1/shared-assets/icon/misc/navbar-stay-compliant.svg" alt="">
+                              </div>
+                            </div>
+                            <div class="right-menu">
+                              <div style="text-align: center;">
+                                  <button class="menu-button" style="background: transparent; border: none;"><i class="fa fa-angle-down" style="font-size:48px; color:green;"></i></button>
+                                </div>
+                                <div class="alt-menu">
+                                  <ul style="padding: 0;"> 
+                                    <li class="mb-3"><a href="#">Find Startup Costs</a> </li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                    <li class="mb-3"><a href="#">Make a Business Plan</a> <br></li>
+                                    <li class="mb-3"><a href="#">Licences & Permits</a></li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                  </ul>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--LAST CARD-->
+                        <div class="card firstcard mb-1" style="width: 17rem; margin-left: 2%; border-radius: 20px; text-align: left; padding: 0;">
+                          <div class="card-body" style="padding:0;">
+                            <div class="row px-3" >
+                              <div class="col-md-9" style="padding: 20px;">
+                                  <p style="padding: 0; margin: 0;"><b>Stay Compliant</b></p>
+                                  <p style="padding: 0; margin: 0;"; >Stay Compliant all year without having to do it yourself.</p>
+                              </div>
+                              <div class="col-md-3 p-1 mt-4">
+                                  <img src="https://res.cloudinary.com/zenbusiness/q_auto,w_50/v1/shared-assets/icon/misc/navbar-stay-compliant.svg" alt="">
+                              </div>
+                            </div>
+                            <div class="right-menu">
+                              <div style="text-align: center;">
+                                  <button class="menu-button" style="background: transparent; border: none;"><i class="fa fa-angle-down" style="font-size:48px; color:green;"></i></button>
+                                </div>
+                                <div class="alt-menu">
+                                  <ul style="padding: 0;"> 
+                                    <li class="mb-3"><a href="#">Find Startup Costs</a> </li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                    <li class="mb-3"><a href="#">Make a Business Plan</a> <br></li>
+                                    <li class="mb-3"><a href="#">Licences & Permits</a></li>
+                                    <li class="mb-3"><a href="#">Research Your Market</a> </li>
+                                  </ul>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Learn-->
+
+
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</body>
+</html>
